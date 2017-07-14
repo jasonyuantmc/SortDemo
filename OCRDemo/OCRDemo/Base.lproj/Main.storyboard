@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3s-bi-JHG">
+                                <rect key="frame" x="10" y="587" width="172.5" height="30"/>
+                                <state key="normal" title="选择图片按钮"/>
+                                <connections>
+                                    <action selector="selectBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5yE-lQ-lih"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UEG-cE-5zj">
+                                <rect key="frame" x="20" y="60" width="335" height="486"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取到的文字" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-iz-6WE" customClass="JYLabel">
+                                <rect key="frame" x="135" y="556" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSw-2R-mwo">
+                                <rect key="frame" x="192.5" y="587" width="172.5" height="30"/>
+                                <state key="normal" title="翻译"/>
+                                <connections>
+                                    <action selector="orcAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DeA-Qd-z1X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K3s-bi-JHG" secondAttribute="bottom" constant="50" id="0n7-WR-cN1"/>
+                            <constraint firstItem="UEG-cE-5zj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="2TW-vf-Zux"/>
+                            <constraint firstItem="XSw-2R-mwo" firstAttribute="width" secondItem="K3s-bi-JHG" secondAttribute="width" id="3cd-TF-YZN"/>
+                            <constraint firstItem="K3s-bi-JHG" firstAttribute="top" secondItem="fhx-iz-6WE" secondAttribute="bottom" constant="10" id="RzV-nQ-wn8"/>
+                            <constraint firstItem="UEG-cE-5zj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="b4A-jc-aYY"/>
+                            <constraint firstItem="XSw-2R-mwo" firstAttribute="centerY" secondItem="K3s-bi-JHG" secondAttribute="centerY" id="bYS-xf-AMC"/>
+                            <constraint firstItem="K3s-bi-JHG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="eje-Hs-FEF"/>
+                            <constraint firstItem="UEG-cE-5zj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ewc-IG-8jL"/>
+                            <constraint firstItem="fhx-iz-6WE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fhM-1U-50u"/>
+                            <constraint firstAttribute="trailing" secondItem="XSw-2R-mwo" secondAttribute="trailing" constant="10" id="l3P-OD-Wyo"/>
+                            <constraint firstItem="fhx-iz-6WE" firstAttribute="top" secondItem="UEG-cE-5zj" secondAttribute="bottom" constant="10" id="mH3-xf-kBm"/>
+                            <constraint firstItem="XSw-2R-mwo" firstAttribute="leading" secondItem="K3s-bi-JHG" secondAttribute="trailing" constant="10" id="n2x-ct-Rac"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="UEG-cE-5zj" id="akK-Hz-3c7"/>
+                        <outlet property="selectPhotoButton" destination="K3s-bi-JHG" id="N3r-BR-o9J"/>
+                        <outlet property="showTextLabel" destination="fhx-iz-6WE" id="AGC-uV-NJt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="42.728635682158924"/>
+        </scene>
+    </scenes>
+</document>

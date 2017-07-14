@@ -45,9 +45,9 @@ static NSString * cellID = @"cell";
 
 -(void)exchangeArray{
     BOOL needStop = YES;
-    for (int i =0; i<[_array1 count]-1; i++) {
+    for (int i =1; i<[_array1 count]; i++) {
         
-        for (int j =0; j<[_array1 count]-1-i; j++) {
+        for (int j =0; j<[_array1 count] -i; j++) {
             
             if(([_array1[j] compare:_array1[j+1]]) == NSOrderedDescending){
                 needStop = NO;
